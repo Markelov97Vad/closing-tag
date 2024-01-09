@@ -1,0 +1,33 @@
+/* Theme variables */
+
+:root {
+  &.theme {
+    &-light {
+      --page-background: #fff;
+      --background-color: #d3d3d3;
+      --background-color-start: #e7e7e7;
+      --background-color-end: #1a1a1a;
+      --title-font-weight: "wght" 700;
+      --text-font-weight: "wght" 400;
+      --header-background: var(--page-background);
+      --text-color: #000;
+      --mix-blend-color: var(--page-background);
+      --stroke-color: var(--text-color);
+      --label-stroke-color: var(--page-background);
+    }
+
+    &-dark {
+      --page-background: #000;
+      --background-color: var(--page-background);
+      --background-color-start: #007f0c;
+      --background-color-end: #004306;
+      --title-font-weight: "wght" 785;
+      --text-font-weight: "wght" 465;
+      --header-background: var(--page-background);
+      --text-color: #00cc14;
+      --mix-blend-color: var(--text-color);
+      --stroke-color: var(--text-color);
+      --label-stroke-color: var(--page-background);
+    }
+  }
+}

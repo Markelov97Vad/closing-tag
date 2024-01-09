@@ -1,0 +1,37 @@
+{
+  "name": "closing-tag",
+  "version": "1.0.0",
+  "description": "Комплектация репозитория:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Markelov97Vad/closing-tag.git"
+  },
+  "author": "Vadim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Markelov97Vad/closing-tag/issues"
+  },
+  "homepage": "https://github.com/Markelov97Vad/closing-tag#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "autoprefixer": "^10.4.16",
+    "browser-sync": "^3.0.2",
+    "cssnano": "^6.0.3",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.33",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.7",
+    "stylelint": "^16.1.0"
+  }
+}
