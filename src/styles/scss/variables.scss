@@ -1,19 +1,20 @@
 /* Root variables */
 
 :root {
-  --main-font-family: Inter, sans-serif;
-  --fantasy-font-family: "Press Start 2P", fantasy;
-  --heart-color: #ff0000;
+  --main-font-family: inter, sans-serif;
+  --fantasy-font-family: 'Press Start 2P', fantasy;
+  --heart-color: #f00;
 }
 
 @media (prefers-color-scheme: light) {
+
   :root {
     --page-background: #fff;
     --background-color: #d3d3d3;
     --background-color-start: #e7e7e7;
     --background-color-end: #1a1a1a;
-    --title-font-weight: "wght" 700;
-    --text-font-weight: "wght" 400;
+    --title-font-weight: 'wght' 700;
+    --text-font-weight: 'wght' 400;
     --header-background: var(--page-background);
     --text-color: #000;
     --mix-blend-color: var(--page-background);
@@ -23,13 +24,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   :root {
     --page-background: #000;
     --background-color: var(--page-background);
     --background-color-start: #007f0c;
     --background-color-end: #004306;
-    --title-font-weight: "wght" 785;
-    --text-font-weight: "wght" 465;
+    --title-font-weight: 'wght' 785;
+    --text-font-weight: 'wght' 465;
     --header-background: var(--page-background);
     --text-color: #00cc14;
     --mix-blend-color: var(--text-color);
@@ -37,3 +39,17 @@
     --label-stroke-color: var(--page-background);
   }
 }
+
+$accent-font-family: var(--fantasy-font-family);
+$text-font-weight: var(--text-font-weight);
+$title-font-weight: var(--title-font-weight);
+$page-background: var(--page-background);
+$background-color: var(--background-color);
+$background-color-start: var(--background-color-start);
+$background-color-end: var(--background-color-end);
+$header-background: var(--header-background);
+$heart-color: var(--heart-color);
+$text-color: var(--text-color);
+$label-stroke-color: var(--label-stroke-color);
+$mix-blend-color: var(--mix-blend-color);
+$stroke-color: var(--stroke-color);

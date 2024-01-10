@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeButtons = document.querySelectorAll('.theme-menu__button');
 
   function setDisabled(theme) {
-    themeButtons.forEach((item) => {
+    themeButtons.forEach(item => {
       if (item.getAttribute('data-theme') === theme) {
         item.setAttribute('disabled', true);
       } else {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setDisabled('auto');
   }
 
-  themeButtons.forEach((button) => {
+  themeButtons.forEach(button => {
     button.onclick = () => {
       changeTheme(button.getAttribute('data-theme'));
       setDisabled(button.getAttribute('data-theme'));

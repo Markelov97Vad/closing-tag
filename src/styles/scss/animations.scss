@@ -1,10 +1,12 @@
 /* Animation */
 
 .theme-menu {
+
   &__button {
+
     &:disabled {
+
       &::before {
-        -webkit-animation: arrow-animation 0.5s ease-in-out infinite alternate;
         animation: arrow-animation 0.5s ease-in-out infinite alternate;
       }
     }
@@ -12,20 +14,21 @@
 }
 
 .like-icon {
+
   &.is-liked {
+
     .heart {
-      -webkit-animation: scale-animation 0.3s ease-in 0.1s 1 alternate;
       animation: scale-animation 0.3s ease-in 0.1s 1 alternate;
     }
 
     .sparks {
-      -webkit-animation: sparks-animation 0.3s ease-in 0.3s 1 alternate;
       animation: sparks-animation 0.3s ease-in 0.3s 1 alternate;
     }
   }
 }
 
-@-webkit-keyframes arrow-animation {
+@keyframes arrow-animation {
+
   from {
     left: -20px;
   }
@@ -36,6 +39,7 @@
 }
 
 @keyframes arrow-animation {
+
   from {
     left: -20px;
   }
@@ -45,7 +49,8 @@
   }
 }
 
-@-webkit-keyframes scale-animation {
+@keyframes scale-animation {
+
   from {
     scale: 1;
   }
@@ -56,6 +61,7 @@
 }
 
 @keyframes scale-animation {
+
   from {
     scale: 1;
   }
@@ -65,7 +71,8 @@
   }
 }
 
-@-webkit-keyframes sparks-animation {
+@keyframes sparks-animation {
+
   from {
     opacity: 0;
   }
@@ -76,6 +83,7 @@
 }
 
 @keyframes sparks-animation {
+
   from {
     opacity: 0;
   }

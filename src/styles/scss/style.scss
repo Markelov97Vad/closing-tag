@@ -1,19 +1,6 @@
-$accent-font-family: var(--fantasy-font-family);
-$text-font-weight: var(--text-font-weight);
-$title-font-weight: var(--title-font-weight);
-$page-background: var(--page-background);
-$background-color: var(--background-color);
-$background-color-start: var(--background-color-start);
-$background-color-end: var(--background-color-end);
-$header-background: var(--header-background);
-$heart-color: var(--heart-color);
-$text-color: var(--text-color);
+@import './variables.scss';
 
-$label-stroke-color: var(--label-stroke-color);
-$mix-blend-color: var(--mix-blend-color);
-$stroke-color: var(--stroke-color);
-
-@mixin PressStart2PFont($fs) {
+@mixin press-start-font($fs) {
   font-family: $accent-font-family;
   font-size: $fs;
 }
@@ -51,51 +38,48 @@ $stroke-color: var(--stroke-color);
 /* Photo filters */
 
 .grayscale {
-  -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
 }
 
 .hue-rotate {
-  -webkit-filter: hue-rotate(30deg);
   filter: hue-rotate(30deg);
 }
 
 .saturate {
-  -webkit-filter: saturate(360%);
   filter: saturate(360%);
 }
 
 .invert {
-  -webkit-filter: invert(80%);
   filter: invert(80%);
 }
 
 .sepia {
-  -webkit-filter: sepia(80%);
   filter: sepia(80%);
 }
 
 .blur {
-  -webkit-filter: blur(20px);
   filter: blur(20px);
 }
 
 .multi-filter {
-  -webkit-filter: saturate(250%) hue-rotate(90deg) grayscale(20%) invert(25%)
-    blur(2px);
   filter: saturate(250%) hue-rotate(90deg) grayscale(20%) invert(25%) blur(2px);
 }
 
 /* Image labels */
 
 .image-label {
-  @include PressStart2PFont(14px);
+
+  @include press-start-font(14px);
+
   font-variation-settings: $text-font-weight;
   z-index: 1;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 $label-stroke-color, 0 1px $label-stroke-color,
-    1px 0 $label-stroke-color, 0 -1px $label-stroke-color;
+  text-shadow:
+    -1px 0 $label-stroke-color,
+    0 1px $label-stroke-color,
+    1px 0 $label-stroke-color,
+    0 -1px $label-stroke-color;
   position: absolute;
   right: 25px;
   top: 27px;
@@ -106,6 +90,7 @@ $stroke-color: var(--stroke-color);
   ) {
     text-shadow: none;
     -webkit-text-stroke: 1px $label-stroke-color;
+    /* stylelint-disable-next-line property-no-unknown */
     text-stroke: 1px $label-stroke-color;
   }
 
@@ -160,6 +145,7 @@ $stroke-color: var(--stroke-color);
   }
 
   &:hover {
+
     .main-body {
       fill: $text-color;
     }
@@ -170,6 +156,7 @@ $stroke-color: var(--stroke-color);
   }
 
   &:active {
+
     .main-body {
       fill: $heart-color;
     }
@@ -180,6 +167,7 @@ $stroke-color: var(--stroke-color);
   }
 
   &.is-liked {
+
     .contour {
       fill: $heart-color;
     }
@@ -197,7 +185,9 @@ $stroke-color: var(--stroke-color);
 /* Buttons */
 
 .button {
-  @include PressStart2PFont(14px);
+
+  @include press-start-font(14px);
+
   position: relative;
   overflow: hidden;
   color: $mix-blend-color;
@@ -207,7 +197,7 @@ $stroke-color: var(--stroke-color);
   transition: 0.5s ease-in-out;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -221,6 +211,7 @@ $stroke-color: var(--stroke-color);
   }
 
   &:hover {
+
     &::before {
       transform: translateX(0);
     }
@@ -231,7 +222,7 @@ $stroke-color: var(--stroke-color);
   }
 
   &:focus-visible {
-    box-shadow: 2px 2px 0px 0px $text-color;
+    box-shadow: 2px 2px 0 0 $text-color;
   }
 
   &__text {
@@ -295,13 +286,12 @@ $stroke-color: var(--stroke-color);
 }
 
 .theme-menu {
+
   &__list {
     font-size: 14px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
     text-align: start;
     margin: 0 45.1%;
@@ -330,14 +320,14 @@ $stroke-color: var(--stroke-color);
       pointer-events: none;
 
       &::before {
-        content: "▶";
+        content: '▶';
         position: absolute;
         left: -15px;
       }
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       width: 100%;
       height: 2px;
@@ -388,9 +378,7 @@ $stroke-color: var(--stroke-color);
 
   &__image {
     display: block;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center;
 
     &-container {
@@ -402,6 +390,7 @@ $stroke-color: var(--stroke-color);
   }
 
   &__text {
+
     &-container {
       padding: 26px 25px;
       font-size: 18px;
@@ -441,7 +430,9 @@ $stroke-color: var(--stroke-color);
   }
 
   &:nth-child(7) {
+
     .card__text {
+
       @media (width <= 375px) {
         max-width: 317px;
       }
@@ -452,18 +443,16 @@ $stroke-color: var(--stroke-color);
 /* Modal */
 
 .dialog {
-  @include PressStart2PFont(14px);
+
+  @include press-start-font(14px);
+
   padding: 30px 26px;
   color: $text-color;
   background: $page-background;
   border: 2px solid $stroke-color;
 
-  &::-webkit-backdrop {
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-
   &::backdrop {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgb(0 0 0 / 0.75);
   }
 
   &:not([open]) {
