@@ -8,7 +8,7 @@ _Проект выполнен ввиде однострочного сайта,
 
 <b>Ссылки на проект:</b>
 
-Frontend (деплой): https://main--flourishing-youtiao-0473e8.netlify.app/
+Frontend (деплой): https://main--sage-selkie-263a93.netlify.app/
 
 ---
 
